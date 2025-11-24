@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="position: relative; background: linear-gradient(242deg, #ffffff 23%, #c08787 100%);">
+
+    <!-- <div class="falling-leaves">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div> -->
+
+    <div class="falling-leaves"></div>
+    <script src="petals.js"></script>
+
+
+    <section class="invitation-container">
+        <div class="roses-top">
+            <img src="assets/roses-cutted.png" alt="">
+        </div>
+
+        <!-- <div class="invite">
+            <p class="my">Mi</p>
+            <p class="event">Primer año</p>
+        </div>
+    
+        <p class="name-container banner">Aranza Mayte</p>   -->
+
+        <div class="photo">
+            <img src="assets/aranza.png" alt="">
+        </div>
+
+        <audio id="myAudio" loop>
+            <source src="assets/happy-piano.mp3" type="audio/mpeg">
+        </audio>
+
+        <button id="muteButton" class="mute-btn"><span class="material-icons">volume_off</span></button>
+
+        <div style="display: flex; flex-direction: column; align-items: center; margin: 14px;">
+            <p>¡Te esperamos!</p>
+        </div>
+
+
+        <div class="event-date">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="assets/double-arrow.png" alt="" style="width: 90px;">
+                <p>Sábado</p>
+                <img src="assets/double-arrow.png" alt="" style="width: 90px;">
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <p style="font-size: 30px;">7</p>
+                <p>Febrero</p>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="assets/double-arrow.png" alt="" style="width: 90px;">
+                <p>15:00 horas</p>
+                <img src="assets/double-arrow.png" alt="" style="width: 90px;">
+            </div>
+        </div>
+
+        <!-- CUENTA REGRESIVA -->
+        <div id="countdown"></div>
+        <script src="countdown.js"></script>
+
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="font-size: 18px;">
+                Finca San Juan
+            </div>
+
+            <div style="font-size: 13px;">
+                Av. Chimalpopoca 46,
+            </div>
+
+            <div style="font-size: 13px;">
+                San Cristobal Nexquipayac,
+            </div>
+
+            <div>56315, Mex</div>
+
+            <div class="location">
+                <a href="https://www.google.com/maps?q=19.5787041,-98.928756"
+                    style="display: flex; flex-direction: row; align-items: center;"><span
+                        class="material-icons">location_on</span> Ver ubicación</a>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 14px;">
+                <p>¡No faltes!</p>
+            </div>
+        </div>
+        <div class="roses-bottom">
+            <img src="assets/roses-cutted.png" alt="">
+        </div>
+    </section>
+
+    <!-- <audio id="bg-music" src="assets/happy-piano.mp3" loop></audio>
+
+    <script>
+        document.addEventListener("click", () => {
+            document.getElementById("bg-music").play();
+        }, { once: true });
+    </script> -->
+
+    <script>
+        const audio = document.getElementById("myAudio");
+        const muteButton = document.getElementById("muteButton");
+
+        // Estado inicial: no reproducido
+        let isPlaying = false;
+
+        muteButton.addEventListener("click", () => {
+            if (!isPlaying) {
+                // Inicia la reproducción al primer click
+                audio.play().then(() => {
+                    audio.muted = false;
+                    isPlaying = true;
+                    muteButton.innerHTML = '<span class="material-icons">volume_up</span>';
+                }).catch(err => {
+                    console.log("No se pudo reproducir:", err);
+                });
+            } else {
+                // Alterna mute
+                audio.muted = !audio.muted;
+                muteButton.innerHTML = audio.muted ? '<span class="material-icons">volume_off</span>' : '<span class="material-icons">volume_up</span>';
+            }
+        });
+
+    </script>
+</body>
+
+</html>
