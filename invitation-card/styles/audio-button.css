@@ -1,0 +1,25 @@
+.mute-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #f1bbcb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.mute-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.mute-btn:active {
+  transform: scale(0.9);
+}

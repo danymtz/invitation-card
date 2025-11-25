@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html {
+  background: linear-gradient(242deg, #ffffff 23%, #c08787 100%);
+}
+
+
 .invitation-container {
     position: relative;
     min-height: 150dvh;
@@ -37,13 +42,21 @@
 }
 
 .roses-bottom img {
-    filter: opacity(0.7);
+    position: fixed;
+    top: 67dvh;
+    left: 0;
+    width: 100dvw;
+    z-index: 10;
+    pointer-events: none;
+    transform: rotate(81deg);
+    filter: saturate(0.6) opacity(0.7);
+    /* filter: opacity(0.7);
     z-index: 4;
     top: 67dvh;
     width: 100dvw;
     position: fixed;
     right: 0dvh;
-    transform: rotate(81deg);
+    transform: rotate(81deg); */
 }
 
 .roses-bottom {
@@ -83,109 +96,14 @@
     gap: 25px;
 }
 
-/* .falling-leaves {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100dvw;
-  height: 100dvh;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 9998;
-}
-
-:root {
-  --leaf-color: #d4abab;
-  --leaf-size: 12px;
-}
-
-.falling-leaves span {
-  position: absolute;
-  top: -10%;
-  width: var(--leaf-size);
-  height: calc(var(--leaf-size) * 1.4);
-  background: var(--leaf-color);
-  border-radius: 60% 40% 60% 40%;
-  opacity: 0.8;
-
-  animation: leafFall linear infinite;
-} */
-
-/* Animación unificada */
-/* @keyframes leafFall {
-  0% {
-    transform: translate3d(0, -10vh, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate3d(30px, 50vh, 0) rotate(120deg);
-  }
-  100% {
-    transform: translate3d(-30px, 110vh, 0) rotate(360deg);
-  }
-} */
-
-/* Configuración individual */
-/* .falling-leaves span:nth-child(1) { left: 5%;  animation-duration: 7s; }
-.falling-leaves span:nth-child(2) { left: 15%; animation-duration: 10s; }
-.falling-leaves span:nth-child(3) { left: 25%; animation-duration: 6s; }
-.falling-leaves span:nth-child(4) { left: 35%; animation-duration: 8s; }
-.falling-leaves span:nth-child(5) { left: 50%; animation-duration: 9s; }
-.falling-leaves span:nth-child(6) { left: 60%; animation-duration: 11s; }
-.falling-leaves span:nth-child(7) { left: 70%; animation-duration: 7.5s; }
-.falling-leaves span:nth-child(8) { left: 80%; animation-duration: 12s; }
-.falling-leaves span:nth-child(9) { left: 90%; animation-duration: 14s; }
-.falling-leaves span:nth-child(10) { left: 95%; animation-duration: 13s; } */
-
-.falling-leaves {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 1000;
-}
-
-/* Personalización */
-:root {
-    --leaf-color: #d4abab;
-}
-
-.leaf {
-    position: absolute;
-    top: -10%;
-    background: var(--leaf-color);
-    border-radius: 60% 40% 60% 40%;
-    opacity: 0.8;
-    animation: leafFall linear forwards;
-}
-
-@keyframes leafFall {
-    0% {
-        transform: translate3d(0, -10vh, 0) rotate(0deg);
-    }
-
-    50% {
-        transform: translate3d(30px, 50vh, 0) rotate(120deg);
-    }
-
-    100% {
-        transform: translate3d(-30px, 110vh, 0) rotate(360deg);
-    }
-}
-
-
 .countdown {
     display: flex;
     flex-direction: column;
     align-items: center !important;
-    justify-content: center;
-
+    justify-content: center !important;
+    text-align: center;
     margin: 12px;
 }
-
-
 
 .location {
     margin-top: 8px;
@@ -198,6 +116,7 @@
     border-radius: 8px;
     text-decoration: none;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .location a {
@@ -211,29 +130,30 @@
     mask-image: radial-gradient(circle, black 60%, transparent 100%);
 }
 
-.mute-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: none;
-  background: #f1bbcb;
-  backdrop-filter: blur(12px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  color: white;
-  bottom: 20px;
-  right: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+.time-block {
+
+    flex-direction: column;
+    align-items: center;
 }
 
-.mute-btn:hover {
-  background: rgba(255, 255, 255, 0.4);
+.time-number {
+    font-size: 34px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 1);
 }
 
-.mute-btn:active {
-  transform: scale(0.9);
+.time-label {
+    font-size: 14px;
+}
+
+.separator {
+    width: 2px;
+    background-color: #f1bbcb;
+}
+
+.colon {
+    font-size: 38px;
+    font-weight: bold;
+    color: #575757ff;
 }

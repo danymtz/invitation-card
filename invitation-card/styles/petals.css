@@ -1,0 +1,77 @@
+:root {
+    --leaf-color: #d4abab;
+}
+
+.falling-leaves {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Hoja en forma ovalada */
+/* 
+.leaf {
+    position: absolute;
+    top: -10%;
+    background: var(--leaf-color);
+    border-radius: 60% 40% 60% 40%;
+    opacity: 0.8;
+    animation: leafFall linear forwards;
+} */
+
+.leaf {
+    position:absolute;
+    top: -10%;
+    width: 15px;
+    height: 30px;
+    background: #d4abab;
+    opacity: 0.9;
+    transform-origin: center;
+    animation: leafFall linear forwards;
+
+    /* Forma más orgánica */
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+}
+
+
+
+@keyframes leafFall {
+    0% {
+        transform: translate3d(0, -10vh, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(30px, 50vh, 0) rotate(120deg);
+    }
+
+    100% {
+        transform: translate3d(-30px, 110vh, 0) rotate(360deg);
+    }
+}
+
+/* @keyframes leafFall {
+    0% {
+        transform: translate3d(0, -10vh, 0) rotate(0deg) rotateZ(0deg);
+    }
+
+    25% {
+        transform: translate3d(20px, 25vh, 0) rotate(90deg) rotateZ(20deg);
+    }
+
+    50% {
+        transform: translate3d(-20px, 50vh, 0) rotate(180deg) rotateZ(-10deg);
+    }
+
+    75% {
+        transform: translate3d(15px, 75vh, 0) rotate(270deg) rotateZ(15deg);
+    }
+
+    100% {
+        transform: translate3d(-10px, 110vh, 0) rotate(360deg) rotateZ(-5deg);
+    }
+} */
