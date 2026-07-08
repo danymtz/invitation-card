@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:title" content="Keilany">
+    <meta property="og:description" content="Invitación | Mis 3 años">
+    <meta property="og:type" content="website">
+    <title>Keilany | Mis 3 años</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/clouds.css">
+    <link rel="stylesheet" href="styles/typing.css">
+    <link rel="stylesheet" href="styles/audio-button.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="position: relative; background-image: url(assets/background.jpg);">
+
+    <!-- ------------- Efecto de nubes --------------->
+    <div class="falling-leaves"></div>
+    <script src="js/clouds.js"></script>
+
+    <section class="invitation-container">
+
+        <div class="roses-top">
+            <img src="assets/flags.png" alt="">
+        </div>
+
+        <!------------------ Foto festejada ---------------------->
+        <div class="photo">
+            <img src="assets/party-host.png" alt="">
+        </div>
+
+        <div class="photo">
+            <img src="assets/lara-campos-logo.png" alt="">
+        </div>
+
+        
+
+        <!--------------------- Música de fondo ------------------>
+        <audio id="myAudio" loop>
+            <source src="assets/Rhenne.mp3" type="audio/mpeg">
+        </audio>
+        <button id="muteButton" class="mute-btn"><span class="material-icons">volume_off</span></button>
+        <script src="js/audio.js"> </script>
+
+        <div
+            style="display: flex; flex-direction: column; align-items: center; margin: 14px; text-align: center; gap: 17px;">
+            <p style="font-style: italic; font-size: 18px; height: 56px;" id="typedText">
+                <span id="text"></span><span class="cursor">|</span>
+            </p>
+            <!------------- Typing de frases ------------>
+            <script src="js/phrases-typing.js"></script>
+            <p>¡Te esperamos!</p>
+        </div>
+
+        <div class="event-date">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="assets/banner.png" alt="" style="width: 90px;">
+                <p>Sábado</p>
+                <img src="assets/banner.png" alt="" style="width: 90px;">
+            </div>
+            <div
+                style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url('assets/heart.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    width: 80px;
+                    height: 80px;
+                    opacity: 80%;
+                "
+            >
+                <p style="font-size: 30px; font-family: 'huglove'; color: #fff;">1</p>
+                <p style="font-family: 'huglove'; color: #fff;">Agosto</p>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img src="assets/banner.png" alt="" style="width: 90px;">
+                <p>6:00 p.m.</p>
+                <img src="assets/banner.png" alt="" style="width: 90px;">
+            </div>
+        </div>
+
+        <!----------------- Cuenta regresiva ---------------------->
+        <div id="countdown" style="margin: 18px 0; "></div>
+        <script src="js/countdown.js"></script>
+
+        <!----------------- Dirección del evento ------------------->
+        <section style="display: flex; flex-direction: column; align-items: center; color: darkolivegreen;">
+            <div style="font-size: 18px;">
+                Cda 5 de mayo No. 17,
+            </div>
+
+            <div style="font-size: 13px; color: darkolivegreen;">
+                Tequisistlán,
+            </div>
+
+            <div style="color: darkolivegreen;">56020, Mex</div>
+
+            <!------------ Botón hacia Google Maps ------------>
+            <div class="location">
+                <a href="https://www.google.com/maps?q=19.5980376,-98.9419995"
+                    style="display: flex; flex-direction: row; align-items: center;">
+                    <span class="material-icons">location_on</span> Ver ubicación</a>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 14px;">
+                <p>¡No faltes!</p>
+            </div>
+        </section>
+
+        <div class="roses-bottom">
+            <img src="assets/rhenne-eyes.png" alt="">
+        </div>
+    </section>
+</body>
+
+</html>

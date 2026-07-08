@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'huglove';
+    src: url('assets/fonts/Huglove.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+  background: linear-gradient(242deg, #ffffff 23%, #c08787 100%);
+}
+
+
+.invitation-container {
+    z-index: 100;
+    position: relative;
+    min-height: 150dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 200px;
+    /* espacio para la imagen inferior */
+}
+
+/* .roses-top img {
+    filter: opacity(0.7);
+    top: -235px; 
+    width: 100dvw;
+    position: fixed;
+    right: 0dvh;
+    transform: rotate(250deg);
+} */
+
+.roses-top img {
+    position: fixed;
+    top: -40px;
+    left: 0;
+    width: 100vw;
+    z-index: 10;
+    pointer-events: none;
+    /* transform: rotate(250deg); */
+    /* filter: saturate(0.6); */
+}
+
+.roses-bottom img {
+    position: fixed;
+    top: 85dvh;
+    left: 0;
+    width: 100dvw;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.roses-bottom {
+    position: fixed;
+    z-index: 9999;
+}
+
+.invite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-container {
+    font-size: 50px;
+    font-family: "Great Vibes";
+    background-image: url("assets/banner.png");
+    background-size: cover;
+    background-position: center;
+    inset: 0;
+    width: 100dvw;
+    height: 40dvh;
+}
+
+.my {
+    font-size: 25px;
+    font-family: "Great Vibes";
+}
+
+.event {
+    font-size: 35px;
+    font-family: "Great Vibes";
+}
+
+.event-date {
+    display: flex;
+    gap: 25px;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    margin: 12px;
+}
+
+.location {
+    margin-top: 8px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff86af;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.location a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.photo img {
+    width: 100dvw;
+    -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+    mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.time-block {
+    font-family: 'huglove';
+    color: #fda0bf;
+    -webkit-text-stroke: 0.1px white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-number {
+    font-size: 45px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 1);
+}
+
+.time-label {
+    font-size: 18px;
+}
+
+.separator {
+    width: 2px;
+    background-color: #f1bbcb;
+}
+
+.colon {
+    font-size: 38px;
+    font-weight: bold;
+    color: #575757ff;
+}

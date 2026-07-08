@@ -1,0 +1,54 @@
+:root {
+    --cloud-color: rgba(255, 255, 255, 0.9);
+}
+
+.falling-leaves {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Nube */
+.cloud {
+    position: absolute;
+    left: -250px;
+    background: var(--cloud-color);
+    border-radius: 999px;
+    filter: blur(1px);
+    animation: moveCloud linear forwards;
+}
+
+/* Bultos para formar la nube */
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 55%;
+    height: 140%;
+    left: 15%;
+    top: -60%;
+}
+
+.cloud::after {
+    width: 45%;
+    height: 120%;
+    right: 15%;
+    top: -40%;
+}
+
+@keyframes moveCloud {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(100vw + 500px));
+    }
+}
